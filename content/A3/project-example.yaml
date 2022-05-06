@@ -1,0 +1,8 @@
+apiVersion: project.openshift.io/v1
+description: "Example 2"
+displayName: example2
+kind: ProjectRequest
+metadata:
+  name: example2
+  annotations:
+    goal: A3
