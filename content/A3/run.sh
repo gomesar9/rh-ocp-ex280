@@ -1,12 +1,13 @@
 #!/bin/bash
+# https://docs.openshift.com/container-platform/4.6/applications/projects/working-with-projects.html
 
 current_project="$(oc project | grep -oP 'Using project "\K[a-z\-_0-9]*')"
-project='example'
+project='example1'
 project_yaml='project-example.yaml'
 project_yaml_name="$(yq '.metadata.name' $project_yaml)"
 
 echo "Creating project \"${project}\" via command line"
-oc new-project "$project"
+oc new-project "$project" --description="Example 1 - Via CLI" --display-name="Example 1"
 
 echo "Creating project \"${project_yaml_name}\" via yaml file"
 oc apply -f "$project_yaml"

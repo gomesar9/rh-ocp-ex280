@@ -1,5 +1,5 @@
 apiVersion: project.openshift.io/v1
-description: "Example 2"
+description: "Example 2 - Via yaml"
 displayName: example2
 kind: ProjectRequest
 metadata:
